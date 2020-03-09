@@ -12,15 +12,19 @@ I am using yarn but it works with npm too.
 ```sh
 yarn install
 ```
-
-2. Development build
+2. Run Server
 ```sh
-yarn run build-dev
+yarn serve
 ```
 
-3. Production build
+3. Development build
 ```sh
-yarn run build-prod
+yarn build-dev
+```
+
+4. Production build
+```sh
+yarn build-prod
 ```
 
 
