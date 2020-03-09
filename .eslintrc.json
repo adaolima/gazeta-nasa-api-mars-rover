@@ -1,0 +1,19 @@
+{
+  "rules": {},
+  "env":{
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "extends": [
+    "eslint:recommend",
+    "plugin:prettier/recommend"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer":"readonly"
+  }
+}
