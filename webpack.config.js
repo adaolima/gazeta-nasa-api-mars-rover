@@ -34,7 +34,6 @@ const config = {
          'postcss-loader'
        ]
       },
-      { test: /\.html$/i, loader: 'html-loader' },
       {
         test: /\.js$/i,
         use: 'babel-loader',
@@ -45,16 +44,28 @@ const config = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader'
+          'sass-loader',
         ]
       },
       {
-        test: /\.png$/,
-        use: [
+        test: /\.(png|jpe?g|webp|gif)$/i,
+        use: [ 
+          {
+            loader: 'responsive-loader',
+            options: {
+              adapter: require('responsive-loader/sharp'),
+              sizes: [300, 600, 1200, 2000],
+              placeholder: true,
+              placeholderSize: 50
+            }
+          },
           {
             loader: 'url-loader',
             options: {
-              mimetype: 'image/png'
+              esModule: false,
+              // limit: 10000,
+              // emitFile: true,
+              // useRelativePath: true,
             }
           }
         ]
@@ -62,7 +73,17 @@ const config = {
       {
         test: /\.svg$/,
         use:'file-loader'
-      }
+      },
+      { test: /\.html$/i,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              interpolate: true
+            }
+          }
+        ]
+      },
     ]
   },
   plugins:[
