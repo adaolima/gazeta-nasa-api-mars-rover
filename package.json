@@ -1,0 +1,28 @@
+{
+  "name": "gazeta-nasa-api-mars-rover",
+  "version": "1.0.0",
+  "description": "consume nasa api to generate a images carousel with some description, and able to select suns. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adaolima/gazeta-nasa-api-mars-rover.git"
+  },
+  "keywords": [
+    "gazeta-do-povo",
+    "nasa",
+    "api",
+    "mars-rover",
+    "suns",
+    "job",
+    "application"
+  ],
+  "author": "@adaolima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adaolima/gazeta-nasa-api-mars-rover/issues"
+  },
+  "homepage": "https://github.com/adaolima/gazeta-nasa-api-mars-rover#readme"
+}
