@@ -1,0 +1,14 @@
+.c-form-searcher {
+
+  .btn-load {
+    position: relative;
+    .fa-spinner {
+      display: none;
+    }
+    &.is-loading {
+        .fa-spinner {
+          display: inline-block;
+        }
+    }
+  }
+}
