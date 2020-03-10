@@ -1,0 +1,225 @@
+.c-navbar {
+  height: auto;
+
+  @include media-breakpoint-up(lg) {
+    padding: 0;
+  }
+  
+  &__wrapper {
+    position: relative;
+    @include make-container();
+    @include make-container-max-widths();
+    padding: 0;
+  }
+  &__header {
+    float: left;
+    @media(max-width:991px) {
+      float: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+  }
+  &__brand {
+    height: 70px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    img {
+      width: 115px;
+    }
+  }
+  &__collapse {
+    width: auto;
+    height: 1px;
+   
+    @include media-breakpoint-up(lg) {
+      &.collapse {
+        display: block;
+        height: auto;
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      height: auto;
+    }
+  }
+  &__toggler {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+    color: rgba(#fff, 1);
+    @include hover-focus {
+      color: rgba(#fff, .5);
+    }
+    
+  }
+
+  &__form {
+    padding: 10px 15px;
+    position: relative;
+    @media(max-width:991px) {
+      &,
+      .form-control{
+        width: 100%;
+      }
+      padding: 10px 0;
+      // padding: 10px 10px;
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        background-color: rgba($secondary, .5);
+        height: 1px;
+        width: 100%;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+    }
+    .input-group {
+      width: auto;
+      .btn.btn-primary {
+        border: 0;
+        background-color: $secondary;
+        color: $purple-dark ;
+        @include hover-focus() {
+          background-color: rgba($secondary, .4);
+          color: lighten($secondary, 15%);
+        }
+      }
+      .form-control {
+        width: 400px;
+        @media(max-width:991px)  {
+          width:auto;
+        }
+      }
+    }
+  }
+
+  &__top-area {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    // flex-direction: row;
+    @media(max-width:991px)  {
+      flex-direction: column;
+    }
+
+    .cta-buttons {
+      @include media-breakpoint-up(lg) {
+        order: 2;
+      }
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @media(max-width:991px)  {
+        padding: 10px 0;
+        width: 100%;
+        position: relative;
+        li {flex: 1;}
+        &::before {
+          position: absolute;
+          content: '';
+          background-color: rgba($secondary, .4);
+          height: 1px;
+          width: 100%;
+          top: 0;
+        }
+      }
+      .btn {
+        border-radius: 0;
+        border: 0;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 35px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $purple-dark;
+        transition: $transitions;
+        &--login {
+          background-color: transparent;
+          color: rgba(#fff, .5);
+          @include hover-focus() {
+            color: rgba(#fff, 1);
+            background-color: #200954;
+          }
+        }
+        &--subscribe {
+          background-color: $yellow;
+          @include hover-focus() {
+            color: $purple-dark;
+            text-decoration: none;
+            background-color: darken($yellow, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom-area {
+    display: flex;
+    justify-content: center;
+    @media(max-width:991px)  {
+      margin-top: 10px;
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      height: 1px;
+      width: 100%;
+      left: 0;
+      background-color: $secondary;
+
+    }
+    .navbar-nav {
+      flex-direction: row;
+      @media(max-width:991px)  {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .nav-link {
+        padding: 10px 15px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        text-transform: uppercase;
+        transition: $transitions;
+        @media(max-width:991px)  {
+          justify-content: center;
+          flex: 1;
+        }
+        [role="icon"] {
+          .fa-circle {
+            color: #fff;
+          }
+          .fa-inverse {
+            color: $purple-dark
+          }
+        }
+
+        @include hover-focus {
+          background-color: rgba($purple-dark, .5);
+          position: relative;
+          &::before {
+            content: '';
+            background-color: #fff;
+            position: absolute;
+            height: 1px;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
