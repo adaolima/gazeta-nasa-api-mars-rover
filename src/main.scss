@@ -9,13 +9,11 @@
 //Components
 @import './styles/components/c-navbar';
 @import './styles/components/c-motion';
+@import './styles/components/c-form-searcher';
+@import './styles/components/c-carousel';
 
 //To import separated
 /*
 @import "custom";
 @import "~bootstrap/scss/bootstrap";
 */
-
-h1 {
-  color: orange;
-}
