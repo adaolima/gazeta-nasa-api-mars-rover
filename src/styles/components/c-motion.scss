@@ -1,0 +1,36 @@
+.c-motion {
+  position: relative;
+  overflow: hidden;
+  &__landscape {
+    background: url(~assets/images/arvores_rodape_anin.png?size=1200) no-repeat
+      center bottom;
+    background-size: 100%;
+    padding-bottom: 4rem;
+  }
+  &__heart {
+    animation: heartbeat 0.25s linear infinite alternate;
+    transform-origin: center;
+
+    @keyframes heartbeat {
+      to {
+        transform: scale(1.5);
+      }
+    }
+  }
+  &__train {
+    position: absolute;
+    bottom: 0;
+    animation: moviment 5s linear infinite forwards;
+    max-height: 89px;
+    height: 100%;
+    @keyframes moviment {
+      0% {
+        transform: translateX(1200px);
+      }
+    
+      100% {
+        transform: translateX(-500px);
+      }
+    }
+  }
+}
