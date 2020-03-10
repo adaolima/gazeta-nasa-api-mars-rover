@@ -7,6 +7,10 @@ header {
 }
 main {
   min-height: 400px;
+  h1 {
+    font-weight: bolder;
+    color: $purple-dark;
+  }
 }
 footer {
   background-color: $secondary;
@@ -42,9 +46,9 @@ footer {
       @media (max-width: 768px){
         a { 
           display: flex;
-          height: 50px;
-          line-height: 50px;
-          font-size: 1.5rem;
+          height: 45px;
+          line-height: 45px;
+          font-size: 1.2rem;
           padding: 0 5px;
           @include hover-focus() {
             background-color: rgba($purple-dark, .5);
