@@ -19,7 +19,7 @@ yarn serve
 
 3. Development build
 ```sh
-yarn build-dev
+yarn build
 ```
 
 4. Production build
