@@ -5,3 +5,95 @@ body {
 header {
   background-color: $primary;
 }
+main {
+  min-height: 400px;
+}
+footer {
+  background-color: $secondary;
+  padding: 3rem 0 0;
+  .footer-brand {
+    width: 115px;
+    display: block;
+    .logo-footer {
+      width: 100%;
+    }
+  }
+  .download-apps {
+    &__item{
+      width: 159px;
+      display: block;
+      margin: 5px 0;
+      transform: $transitions;
+      transform: scale(1);
+      @include hover-focus() {
+        opacity: .7;
+        transform: scale(1.1);
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .footer-nav {
+    &,
+    a { color: #fff;}
+    li {
+      padding: 8px 0px;
+      @media (max-width: 768px){
+        a { 
+          display: flex;
+          height: 50px;
+          line-height: 50px;
+          font-size: 1.5rem;
+          padding: 0 5px;
+          @include hover-focus() {
+            background-color: rgba($purple-dark, .5);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  h6 {color: #fff;}
+  .icon-link {
+    [role="icon"] {
+      .fa-circle {
+       
+        color: $purple-dark
+      }
+      .fa-inverse {
+        color: #fff;
+      }
+    }
+    @include hover-focus() {
+      [role="icon"] {
+        .fa-circle {
+          color: rgba($purple-dark, .5)
+        }
+        .fa-inverse {
+          color: #fff;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px){
+    .col-xs-6 {
+      width: auto;
+    }
+    .fa-stack {
+      height: 50px;
+      width: 50px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      .fa {
+        font-size: 2.5rem;
+        &.fa-inverse {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  
+  
+}
