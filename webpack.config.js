@@ -8,6 +8,11 @@ const config = {
   mode: 'development',
   entry: './src/index.js',
   devtool: 'inline-source-map',
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, './src/assets')
+    }
+  },
   devServer: {
     contentBase: path.join(__dirname, 'public'),
     compress: true
