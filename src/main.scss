@@ -1,16 +1,17 @@
 //import scss bootstrap
 // @import 'bootstrap';
 @import "~bootstrap/scss/bootstrap";
-@import './styles/variables';
+@import "./styles/variables";
 
 //Layout
-@import './styles/layout';
+@import "./styles/layout";
 
 //Components
-@import './styles/components/c-navbar';
-@import './styles/components/c-motion';
-@import './styles/components/c-form-searcher';
-@import './styles/components/c-carousel';
+@import "./styles/components/c-navbar";
+@import "./styles/components/c-motion";
+@import "./styles/components/c-form-searcher";
+@import "./styles/components/c-carousel";
+@import "./styles/components/c-whatsapp";
 
 //To import separated
 /*
