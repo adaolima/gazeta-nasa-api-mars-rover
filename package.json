@@ -4,7 +4,7 @@
   "description": "consume nasa api to generate a images carousel with some description, and able to select suns. ",
   "main": "index.js",
   "scripts": {
-    "clean": "rm public/bundle.js",
+    "clean": "rm public/*",
     "watch": "webpack --watch",
     "serve": "webpack-dev-server --open",
     "build": "webpack",
