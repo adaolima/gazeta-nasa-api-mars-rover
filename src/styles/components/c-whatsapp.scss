@@ -1,0 +1,68 @@
+.c-whatsapp {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  z-index: 9999;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    color: white;
+    background-color: #25d366;
+    box-shadow: 5px 5px 5px rgba(#000, 0.5);
+    transform: scale(1);
+    transition: $transitions;
+
+    @include hover-focus() {
+      text-decoration: none;
+      color: white;
+      transform: scale(1.1);
+    }
+    [role="icon"] {
+      text-shadow: 1px 1px 5px rgba(#000, 0.5);
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      font-weight: bold;
+      content: "1";
+      background-color: red;
+      z-index: 2;
+      opacity: 0;
+      animation: notification 0.3s 10s 1 ease-out forwards;
+    }
+    &:after {
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      display: block;
+      height: 29px;
+      width: 29px;
+      border-radius: 50%;
+      font-weight: bold;
+      content: "";
+      background-color: white;
+      opacity: 0;
+      animation: notification 0.3s 10s 1 ease-out forwards;
+    }
+  }
+  @keyframes notification {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
