@@ -53,25 +53,22 @@
             </li>
           </ul>
           <form
-            class="c-navbar__form navbar-form search-field"
+            class="c-navbar__form navbar-form search-field gcse-searchbox-only"
             method="GET"
-            action="/busca"
-            id="form"
+            target="_blank"
+            action="http://google.com.br/search"
+            id="search_form"
+            rel="noopener noreferrer"
           >
             <div class="input-group">
               <input
                 type="text"
                 class="form-control"
-                placeholder=""
-                name="busca"
-                value=""
+                placeholder="Buscar"
+                name="q"
               />
               <div class="input-group-append">
-                <button
-                  onclick="form.submit();"
-                  class="btn btn-primary "
-                  id="navbar-form-button"
-                >
+                <button class="btn btn-primary " id="navbar-form-button">
                   <i class="fa fa-fw fa-search"></i>
                 </button>
               </div>
@@ -83,21 +80,35 @@
         <div class="c-navbar__bottom-area c-menu">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="https://gazetadopovo.com.br/filmes/">Cinema</a>
+              <a class="nav-link" href="https://gazetadopovo.com.br/filmes/"
+                >Cinema</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://gazetadopovo.com.br/gastronomia/">Gastronomia</a>
+              <a
+                class="nav-link"
+                href="https://gazetadopovo.com.br/gastronomia/"
+                >Gastronomia</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://gazetadopovo.com.br/noticias/">Notícias</a>
+              <a class="nav-link" href="https://gazetadopovo.com.br/noticias/"
+                >Notícias</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://gazetadopovo.com.br/eventos/">Shows</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://gazetadopovo.com.br/parceiros/">Parceiros</a>
+              <a class="nav-link" href="https://gazetadopovo.com.br/eventos/"
+                >Shows</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link"
+              <a class="nav-link" href="https://gazetadopovo.com.br/parceiros/"
+                >Parceiros</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
                 href="https://www.facebook.com/GuiaGazetadoPovoeClube/"
                 target="_blank"
               >
